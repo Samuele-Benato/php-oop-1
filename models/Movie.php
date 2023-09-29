@@ -14,7 +14,7 @@ class Movie
         string $title,
         string $author,
         int $year,
-        string $genre,
+        Genre $genre,
         string $plot,
         string $duration,
         float $vote,
