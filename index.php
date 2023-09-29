@@ -1,3 +1,6 @@
+<?php
+require __DIR__ . './arrays/db.php'
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +38,10 @@
 </html>
 
 <body>
-    <?php
-    require_once __DIR__ . 'arrays/db.php'
-        ?>
+
+    <div class="container">
+        <div class="card">
+            <?php echo $grease_movie ?>
+        </div>
+    </div>
 </body>
