@@ -1,6 +1,10 @@
 <?php
-require __DIR__ . '../models/Movie.php';
-require __DIR__ . '../models/Genre.php';
+require __DIR__ . '/../models/Movie.php';
+require __DIR__ . '/../models/Genre.php';
+
+
+
+
 $grease_movie = new Movie(
     'Grease',
     'Randal Kleiser',

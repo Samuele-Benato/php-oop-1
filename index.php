@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . './arrays/db.php'
+require __DIR__ . '/arrays/db.php'
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,29 @@ require __DIR__ . './arrays/db.php'
 
     <div class="container">
         <div class="card">
-            <?php echo $grease_movie ?>
+            <div class="card-body">
+                <h3>
+                    <?php echo $grease_movie->title ?>
+                </h3>
+                <h4>
+                    <?php echo $grease_movie->author ?>
+                </h4>
+                <h6>
+                    <?php echo $grease_movie->year ?>
+                </h6>
+                <b>
+                    <?php echo implode("/", $grease_movie->genre->type) ?>
+                </b>
+                <p>
+                    <?php echo $grease_movie->plot ?>
+                </p>
+                <small>
+                    <?php echo $grease_movie->duration ?>
+                </small>
+                <small>
+                    <?php echo $grease_movie->vote ?>/5
+                </small>
+            </div>
         </div>
     </div>
 </body>

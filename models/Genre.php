@@ -5,6 +5,6 @@ class Genre
     public function __construct(
         array $type,
     ) {
-        $this->$type = $type;
+        $this->type = $type;
     }
 }
