@@ -46,25 +46,25 @@ require __DIR__ . '/arrays/db.php'
                 <div class="card">
                     <div class="card-body">
                         <h3>
-                            <?php echo "Titolo: " . $movie['title'] . "<br>"; ?>
+                            <?php echo "Titolo: " . $movie->title . "<br>"; ?>
                         </h3>
                         <h4>
-                            <?php echo "Regista: " . $movie['author'] . "<br>"; ?>
+                            <?php echo "Regista: " . $movie->author . "<br>"; ?>
                         </h4>
                         <h6>
-                            <?php echo "Anno: " . $movie['year'] . "<br>"; ?>
+                            <?php echo "Anno: " . $movie->year . "<br>"; ?>
                         </h6>
                         <b>
-                            <?php echo "Generi: " . implode('/', $movie['genre']) . "<br>"; ?>
+                            <?php echo "Generi: " . implode(', ', $movie->genre->type) . "<br>"; ?>
                         </b>
                         <p>
-                            <?php echo "Trama: " . $movie['plot'] . "<br>"; ?>
+                            <?php echo "Trama: " . $movie->plot . "<br>"; ?>
                         </p>
                         <small>
-                            <?php echo "Durata: " . $movie['duration'] . "<br>"; ?>
+                            <?php echo "Durata: " . $movie->duration . "<br>"; ?>
                         </small>
                         <small>
-                            <?php echo "Voto: " . $movie['vote'] . "/5" . "<br>"; ?>
+                            <?php echo "Voto: " . $movie->vote . "/5" . "<br>"; ?>
                         </small>
                     </div>
                 </div>

@@ -7,4 +7,5 @@ class Genre
     ) {
         $this->type = $type;
     }
+
 }
