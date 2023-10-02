@@ -1,5 +1,5 @@
 <?php
-class TvSeries extends Prodaction
+class Movie extends Prodaction
 {
     public $published_year;
     public $running_time;
