@@ -42,7 +42,7 @@ require __DIR__ . '/arrays/db.php'
     <div class="container">
         <div class="row justify-content-center align-items-center g-2">
             <div class="col">
-                <?php foreach ($movies as $movie) ?>
+                <?php foreach ($movies as $movie): ?>
                 <div class="card">
                     <div class="card-body">
                         <h3>
@@ -68,6 +68,7 @@ require __DIR__ . '/arrays/db.php'
                         </small>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </div>
 
         </div>

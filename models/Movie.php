@@ -1,31 +1,23 @@
 <?php
-class Movie
+class TvSeries extends Prodaction
 {
-    public $title;
-    public $author;
-    public $year;
-    public $genre;
-    public $plot;
-    public $duration;
-    public $vote;
-
+    public $published_year;
+    public $running_time;
 
     public function __construct(
         string $title,
         string $author,
-        int $year,
         Genre $genre,
         string $plot,
-        string $duration,
         float $vote,
+        int $published_year,
+        string $running_time,
+
     ) {
-        $this->title = $title;
-        $this->author = $author;
-        $this->year = $year;
-        $this->genre = $genre;
-        $this->plot = $plot;
-        $this->duration = $duration;
-        $this->vote = $vote;
+        parent::__construct($title, $author, $genre, $plot, $vote, );
+        $this->published_year = $published_year;
+        $this->running_time = $running_time;
+
     }
 
 }
