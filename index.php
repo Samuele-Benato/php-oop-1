@@ -40,30 +40,37 @@ require __DIR__ . '/arrays/db.php'
 <body>
 
     <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h3>
-                    <?php echo $grease_movie->title ?>
-                </h3>
-                <h4>
-                    <?php echo $grease_movie->author ?>
-                </h4>
-                <h6>
-                    <?php echo $grease_movie->year ?>
-                </h6>
-                <b>
-                    <?php echo implode("/", $grease_movie->genre->type) ?>
-                </b>
-                <p>
-                    <?php echo $grease_movie->plot ?>
-                </p>
-                <small>
-                    <?php echo $grease_movie->duration ?>
-                </small>
-                <small>
-                    <?php echo $grease_movie->vote ?>/5
-                </small>
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col">
+                <?php foreach ($movies as $movie) ?>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>
+                            <?php echo "Titolo: " . $movie['title'] . "<br>"; ?>
+                        </h3>
+                        <h4>
+                            <?php echo "Regista: " . $movie['author'] . "<br>"; ?>
+                        </h4>
+                        <h6>
+                            <?php echo "Anno: " . $movie['year'] . "<br>"; ?>
+                        </h6>
+                        <b>
+                            <?php echo "Generi: " . implode('/', $movie['genre']) . "<br>"; ?>
+                        </b>
+                        <p>
+                            <?php echo "Trama: " . $movie['plot'] . "<br>"; ?>
+                        </p>
+                        <small>
+                            <?php echo "Durata: " . $movie['duration'] . "<br>"; ?>
+                        </small>
+                        <small>
+                            <?php echo "Voto: " . $movie['vote'] . "/5" . "<br>"; ?>
+                        </small>
+                    </div>
+                </div>
             </div>
+
         </div>
+
     </div>
 </body>
