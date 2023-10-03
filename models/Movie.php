@@ -7,7 +7,7 @@ class Movie extends Prodaction
     public function __construct(
         string $title,
         string $author,
-        Genre $genre,
+        array $genre,
         string $plot,
         float $vote,
         int $published_year,
@@ -32,11 +32,7 @@ class Movie extends Prodaction
         } else {
             $genreString .= "Nessun genere specificato";
         }
-        return "<strong> Titolo : </strong> $this->title <br>
-            <strong> Regista : </strong> $this->author <br>
-            $genreString <br>
-            <strong> Trama : </strong> $this->plot <br>
-            <strong> Voto : </strong> $this->vote/5 <br>
+        return parent::getDetails() . "
             <strong> Anno : </strong> $this->published_year <br>
             <strong> Durata : </strong> $this->running_time <br>";
     }

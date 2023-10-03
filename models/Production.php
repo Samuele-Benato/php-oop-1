@@ -11,7 +11,7 @@ class Prodaction
     public function __construct(
         string $title,
         string $author,
-        Genre $genre,
+        array $genre,
         string $plot,
         float $vote,
     ) {
@@ -34,11 +34,11 @@ class Prodaction
         } else {
             $genreString .= "Nessun genere specificato";
         }
-        return "<strong> Titolo : </strong> $this->title, <br>
-            <strong> Regista : </strong> $this->author, <br>
+        return "<strong> Titolo : </strong> $this->title <br>
+            <strong> Regista : </strong> $this->author <br>
             $genreString, <br>
-            <strong> Trama : </strong> $this->plot, <br>
-            <strong> Voto : </strong> $this->vote/5, <br>";
+            <strong> Trama : </strong> $this->plot <br>
+            <strong> Voto : </strong> $this->vote/5 <br>";
     }
 
 }

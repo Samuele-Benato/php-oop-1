@@ -42,16 +42,16 @@ require __DIR__ . '/arrays/db.php'
     <div class="container">
         <h1 class="text-center my-4">PHP Object-oriented programming 1 <br> (Movies & Tv Series)</h1>
         <div class="row justify-content-around align-items-start g-2">
-            <div class="col col-lg-6 col-md-4 ">
+            <div class="col col-lg-6 ">
                 <?php foreach ($movies as $movie): ?>
                 <div class="card my-3">
 
                     <div class="card-body">
-                        <h5 class="card-title">
+                        <h5 class="card-title text-center">
                             Film
                         </h5>
                         <hr>
-                        <p>
+                        <p class="m-0">
                             <?php echo $movie->getDetails() . "<br>"; ?>
                         </p>
                     </div>
@@ -63,11 +63,11 @@ require __DIR__ . '/arrays/db.php'
                 <div class="card my-3">
 
                     <div class="card-body">
-                        <h5 class="card-title">
+                        <h5 class="card-title text-center">
                             Serie Tv
                         </h5>
                         <hr>
-                        <p>
+                        <p class="m-0">
                             <?php echo $tvserie->getDetails() . "<br>"; ?>
                         </p>
                     </div>

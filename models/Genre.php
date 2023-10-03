@@ -3,7 +3,7 @@ class Genre
 {
     public $type;
     public function __construct(
-        array $type,
+        string $type,
     ) {
         $this->type = $type;
     }
