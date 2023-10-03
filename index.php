@@ -40,10 +40,10 @@ require __DIR__ . '/arrays/db.php'
 <body>
 
     <div class="container">
-        <div class="row justify-content-center align-items-center g-2">
-            <div class="col">
+        <div class="row justify-content-around align-items-center g-2">
+            <div class="col col-lg-6 col-md-4 ">
                 <?php foreach ($movies as $movie): ?>
-                <div class="card">
+                <div class="card my-3">
                     <div class="card-body">
                         <p>
                             <?php echo $movie->getDetails() . "<br>"; ?>
@@ -52,7 +52,17 @@ require __DIR__ . '/arrays/db.php'
                 </div>
                 <?php endforeach; ?>
             </div>
-
+            <div class="col-lg-6 col-md-4">
+                <?php foreach ($tvseries as $tvserie): ?>
+                <div class="card my-3">
+                    <div class="card-body">
+                        <p>
+                            <?php echo $tvserie->getDetails() . "<br>"; ?>
+                        </p>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
         </div>
 
     </div>

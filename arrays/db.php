@@ -25,5 +25,30 @@ $terminator_movie = new Movie(
     '1 ora e 47 minuti',
 );
 
+$himym_tvseries = new TvSeries(
+    "How I Met Your Mother",
+    "Carter Bays, Craig Thomas",
+    new Genre(["Commedia", "Romantico"]),
+    "La serie racconta le vicende di Ted Mosby che, nel 2030, racconta ai suoi figli la storia di come ha conosciuto la loro madre.",
+    8.4,
+    2005,
+    2014,
+    208,
+    9
+);
+
+$simpsons_tvseries = new TvSeries(
+    "The Simpsons",
+    "Matt Groening",
+    new Genre(["Animazione", "Commedia"]),
+    "La vita della famiglia Simpson nella cittadina immaginaria di Springfield.",
+    8.7,
+    1989,
+    2020,
+    744,
+    34
+);
+
 $movies = [$terminator_movie, $grease_movie];
-?>
+$tvseries = [$simpsons_tvseries, $himym_tvseries]
+    ?>

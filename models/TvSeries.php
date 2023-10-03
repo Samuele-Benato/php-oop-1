@@ -39,15 +39,15 @@ class TvSeries extends Prodaction
         } else {
             $genreString .= "Nessun genere specificato";
         }
-        return "<strong> Titolo : </strong> $this->title, <br>
-            <strong> Regista : </strong> $this->author, <br>
-             $genreString, <br>
-            <strong> Trama : </strong> $this->plot, <br>
-            <strong> Voto : </strong> $this->vote/5, <br>
-            <strong> Uscita : </strong> $this->aired_from_year, <br>
-            <strong> Ultima Stagione : </strong> $this->aired_to_year, <br>
-            <strong> N° Episodi : </strong> $this->number_of_episodes, <br>
-            <strong> N° Stagioni : </strong> $this->number_of_seasons, <br>";
+        return "<strong> Titolo : </strong> $this->title <br>
+            <strong> Regista : </strong> $this->author <br>
+             $genreString <br>
+            <strong> Trama : </strong> $this->plot <br>
+            <strong> Voto : </strong> $this->vote/10 <br>
+            <strong> Uscita : </strong> $this->aired_from_year <br>
+            <strong> Ultima Stagione : </strong> $this->aired_to_year <br>
+            <strong> N° Episodi : </strong> $this->number_of_episodes <br>
+            <strong> N° Stagioni : </strong> $this->number_of_seasons <br>";
     }
 
 }
