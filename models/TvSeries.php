@@ -26,5 +26,28 @@ class TvSeries extends Prodaction
         $this->number_of_episodes = $number_of_episodes;
         $this->number_of_seasons = $number_of_seasons;
     }
+    public function getDetails()
+    {
+        $genreString = "<strong> Genere : </strong>";
+
+        if (is_array($this->genre) && !empty($this->genre)) {
+            foreach ($this->genre as $genre) {
+                $genreString .= " $genre, ";
+            }
+
+            $genreString = rtrim($genreString, ', ');
+        } else {
+            $genreString .= "Nessun genere specificato";
+        }
+        return "<strong> Titolo : </strong> $this->title, <br>
+            <strong> Regista : </strong> $this->author, <br>
+             $genreString, <br>
+            <strong> Trama : </strong> $this->plot, <br>
+            <strong> Voto : </strong> $this->vote/5, <br>
+            <strong> Uscita : </strong> $this->aired_from_year, <br>
+            <strong> Ultima Stagione : </strong> $this->aired_to_year, <br>
+            <strong> N° Episodi : </strong> $this->number_of_episodes, <br>
+            <strong> N° Stagioni : </strong> $this->number_of_seasons, <br>";
+    }
 
 }

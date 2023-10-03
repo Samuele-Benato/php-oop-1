@@ -21,5 +21,24 @@ class Prodaction
         $this->plot = $plot;
         $this->vote = $vote;
     }
+    public function getDetails()
+    {
+        $genreString = "<strong> Genere : </strong>";
+
+        if (is_array($this->genre) && !empty($this->genre)) {
+            foreach ($this->genre as $genre) {
+                $genreString .= " $genre, ";
+            }
+
+            $genreString = rtrim($genreString, ', ');
+        } else {
+            $genreString .= "Nessun genere specificato";
+        }
+        return "<strong> Titolo : </strong> $this->title, <br>
+            <strong> Regista : </strong> $this->author, <br>
+            $genreString, <br>
+            <strong> Trama : </strong> $this->plot, <br>
+            <strong> Voto : </strong> $this->vote/5, <br>";
+    }
 
 }

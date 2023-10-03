@@ -43,31 +43,13 @@ require __DIR__ . '/arrays/db.php'
         <div class="row justify-content-center align-items-center g-2">
             <div class="col">
                 <?php foreach ($movies as $movie): ?>
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>
-                                <?php echo "Titolo: " . $movie->title . "<br>"; ?>
-                            </h3>
-                            <h4>
-                                <?php echo "Regista: " . $movie->author . "<br>"; ?>
-                            </h4>
-                            <h6>
-                                <?php echo "Anno: " . $movie->published_year . "<br>"; ?>
-                            </h6>
-                            <b>
-                                <?php echo "Generi: " . implode(', ', $movie->genre->type) . "<br>"; ?>
-                            </b>
-                            <p>
-                                <?php echo "Trama: " . $movie->plot . "<br>"; ?>
-                            </p>
-                            <small>
-                                <?php echo "Durata: " . $movie->running_time . "<br>"; ?>
-                            </small>
-                            <small>
-                                <?php echo "Voto: " . $movie->vote . "/5" . "<br>"; ?>
-                            </small>
-                        </div>
+                <div class="card">
+                    <div class="card-body">
+                        <p>
+                            <?php echo $movie->getDetails() . "<br>"; ?>
+                        </p>
                     </div>
+                </div>
                 <?php endforeach; ?>
             </div>
 
