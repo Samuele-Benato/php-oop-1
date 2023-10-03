@@ -37,14 +37,20 @@ require __DIR__ . '/arrays/db.php'
 
 </html>
 
-<body>
+<body data-bs-theme="dark">
 
     <div class="container">
+        <h1 class="text-center my-4">PHP Object-oriented programming 1 <br> (Movies & Tv Series)</h1>
         <div class="row justify-content-around align-items-center g-2">
             <div class="col col-lg-6 col-md-4 ">
                 <?php foreach ($movies as $movie): ?>
                 <div class="card my-3">
+
                     <div class="card-body">
+                        <h5 class="card-title">
+                            Film
+                        </h5>
+                        <hr>
                         <p>
                             <?php echo $movie->getDetails() . "<br>"; ?>
                         </p>
@@ -55,7 +61,12 @@ require __DIR__ . '/arrays/db.php'
             <div class="col-lg-6 col-md-4">
                 <?php foreach ($tvseries as $tvserie): ?>
                 <div class="card my-3">
+
                     <div class="card-body">
+                        <h5 class="card-title">
+                            Serie Tv
+                        </h5>
+                        <hr>
                         <p>
                             <?php echo $tvserie->getDetails() . "<br>"; ?>
                         </p>
